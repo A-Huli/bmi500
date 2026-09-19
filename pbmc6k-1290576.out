@@ -1,0 +1,147 @@
+/home/bklaude/bmi500/bmi500/lib/python3.13/site-packages/scanpy/_utils/__init__.py:27: FutureWarning: `__version__` is deprecated, use `importlib.metadata.version('anndata')` instead.
+  from anndata import __version__ as anndata_version
+/home/bklaude/bmi500/bmi500/lib/python3.13/site-packages/anndata/__init__.py:70: FutureWarning: Importing read_csv from `anndata` is deprecated. Import anndata.io.read_csv instead.
+  return module_get_attr_redirect(attr_name, deprecated_mapping=_DEPRECATED)
+/home/bklaude/bmi500/bmi500/lib/python3.13/site-packages/anndata/__init__.py:70: FutureWarning: Importing read_excel from `anndata` is deprecated. Import anndata.io.read_excel instead.
+  return module_get_attr_redirect(attr_name, deprecated_mapping=_DEPRECATED)
+/home/bklaude/bmi500/bmi500/lib/python3.13/site-packages/anndata/__init__.py:70: FutureWarning: Importing read_hdf from `anndata` is deprecated. Import anndata.io.read_hdf instead.
+  return module_get_attr_redirect(attr_name, deprecated_mapping=_DEPRECATED)
+/home/bklaude/bmi500/bmi500/lib/python3.13/site-packages/anndata/__init__.py:70: FutureWarning: Importing read_loom from `anndata` is deprecated. Import anndata.io.read_loom instead.
+  return module_get_attr_redirect(attr_name, deprecated_mapping=_DEPRECATED)
+/home/bklaude/bmi500/bmi500/lib/python3.13/site-packages/anndata/__init__.py:70: FutureWarning: Importing read_mtx from `anndata` is deprecated. Import anndata.io.read_mtx instead.
+  return module_get_attr_redirect(attr_name, deprecated_mapping=_DEPRECATED)
+/home/bklaude/bmi500/bmi500/lib/python3.13/site-packages/anndata/__init__.py:70: FutureWarning: Importing read_text from `anndata` is deprecated. Import anndata.io.read_text instead.
+  return module_get_attr_redirect(attr_name, deprecated_mapping=_DEPRECATED)
+/home/bklaude/bmi500/bmi500/lib/python3.13/site-packages/anndata/__init__.py:70: FutureWarning: Importing read_umi_tools from `anndata` is deprecated. Import anndata.io.read_umi_tools instead.
+  return module_get_attr_redirect(attr_name, deprecated_mapping=_DEPRECATED)
+/home/bklaude/bmi500/bmi500/lib/python3.13/site-packages/louvain/__init__.py:54: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import get_distribution, DistributionNotFound
+/home/bklaude/bmi500/bmi500/lib/python3.13/site-packages/scanpy/logging.py:151: FutureWarning: `__version__` is deprecated, use `importlib.metadata.version('anndata')` instead.
+  yield dist_name, imp.__version__
+... reading from cache file cache/data-pbmc6k-filtered_gene_bc_matrices-matrix.h5ad
+filtered out 1 cells that have less than 200 genes expressed
+filtered out 18395 genes that are detected in less than 3 cells
+normalizing counts per cell
+    finished (0:00:00)
+extracting highly variable genes
+    finished (0:00:00)
+--> added
+    'highly_variable', boolean vector (adata.var)
+    'means', float vector (adata.var)
+    'dispersions', float vector (adata.var)
+    'dispersions_norm', float vector (adata.var)
+/home/bklaude/bmi500/bmi500/lib/python3.13/site-packages/scanpy/preprocessing/_scale.py:316: UserWarning: Received a view of an AnnData. Making a copy.
+  view_to_actual(adata)
+... as `zero_center=True`, sparse input is densified and may lead to large memory consumption
+computing PCA
+    with n_comps=30
+/home/bklaude/bmi500/bmi500/lib/python3.13/site-packages/scanpy/preprocessing/_pca.py:208: FutureWarning: `__version__` is deprecated, use `importlib.metadata.version('anndata')` instead.
+  Version(ad.__version__) < Version("0.9")
+    finished (0:00:00)
+computing neighbors
+/home/bklaude/bmi500/bmi500/lib/python3.13/site-packages/scanpy/neighbors/__init__.py:411: FutureWarning: The method obsm_keys is deprecated and will be removed in the future. Use obsm instead of obsm_keys. (e.g. `k in adata.obsm` or `adata.obsm.keys() | {'u'}`)
+  if "X_diffmap" in adata.obsm_keys():
+    using 'X_pca' with n_pcs = 30
+    finished: added to `.uns['neighbors']`
+    `.obsp['distances']`, distances for each pair of neighbors
+    `.obsp['connectivities']`, weighted adjacency matrix (0:00:03)
+running Louvain clustering
+    using the "louvain" package of Traag (2017)
+    finished: found 7 clusters and added
+    'louvain', the cluster labels (adata.obs, categorical) (0:00:00)
+computing UMAP
+    finished: added
+    'X_umap', UMAP coordinates (adata.obsm) (0:00:10)
+ranking genes
+    finished: added to `.uns['rank_genes_groups']`
+    'names', sorted np.recarray to be indexed by group ids
+    'scores', sorted np.recarray to be indexed by group ids
+    'logfoldchanges', sorted np.recarray to be indexed by group ids
+    'pvals', sorted np.recarray to be indexed by group ids
+    'pvals_adj', sorted np.recarray to be indexed by group ids (0:00:02)
+TIME imports: 1.840 s
+scanpy==1.10.2 anndata==0.12.19 umap==0.5.12 numpy==1.26.4 scipy==1.17.1 pandas==2.3.3 scikit-learn==1.9.1 statsmodels==0.15.0 igraph==0.11.6 louvain==0.8.2 pynndescent==0.6.0
+using 1 threads
+TIME settings: 4.922 s
+TIME arguments: 0.001 s
+TIME I/O read: 0.131 s
+TIME filtering: 0.057 s
+TIME normalize: 0.014 s
+TIME highly variable genes: 0.024 s
+TIME scale: 0.057 s
+TIME pca: 0.304 s
+TIME neighbors: 3.391 s
+TIME louvain: 0.235 s
+TIME umap: 10.332 s
+TIME I/O write: 0.170 s
+TIME rank_genes_groups: 2.757 s
+Wed Sep 16 14:17:23 2026    data/pbmc6k.prof
+
+         80024 function calls (78233 primitive calls) in 2.752 seconds
+
+   Ordered by: cumulative time
+   List reduced from 1031 to 20 due to restriction <20>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+     24/1    0.000    0.000    2.752    2.752 {built-in method builtins.exec}
+        1    0.000    0.000    2.752    2.752 <string>:1(<module>)
+        1    0.000    0.000    2.752    2.752 __init__.py:83(fn_compatible)
+        1    0.000    0.000    2.752    2.752 _rank_genes_groups.py:469(rank_genes_groups)
+        1    0.002    0.002    2.679    2.679 _rank_genes_groups.py:398(compute_statistics)
+        8    0.003    0.000    2.643    0.330 _rank_genes_groups.py:277(wilcoxon)
+        9    0.019    0.002    2.128    0.236 _rank_genes_groups.py:45(_ranks)
+        8    0.000    0.000    2.001    0.250 generic.py:10012(rank)
+        8    0.000    0.000    2.001    0.250 generic.py:10127(ranker)
+        8    1.999    0.250    1.999    0.250 algorithms.py:1067(rank)
+        1    0.000    0.000    0.264    0.264 _rank_genes_groups.py:174(_basic_stats)
+       22    0.000    0.000    0.252    0.011 _index.py:29(__getitem__)
+       14    0.000    0.000    0.245    0.017 _csc.py:140(_get_arrayXslice)
+       14    0.000    0.000    0.245    0.017 _compressed.py:651(_minor_index_fancy)
+       14    0.217    0.016    0.217    0.016 {built-in method scipy.sparse._sparsetools.csr_column_index2}
+  155/154    0.001    0.000    0.176    0.001 indexing.py:1177(__getitem__)
+       96    0.000    0.000    0.170    0.002 indexing.py:1690(_getitem_tuple)
+      152    0.000    0.000    0.169    0.001 indexing.py:1720(_getitem_axis)
+       63    0.000    0.000    0.160    0.003 indexing.py:1206(_getbool_axis)
+       56    0.000    0.000    0.158    0.003 indexing.py:1005(_getitem_tuple_same_dim)
+
+
+              section   seconds
+              imports  1.840435
+             settings  4.921984
+            arguments  0.000642
+             I/O read  0.130663
+            filtering  0.056852
+            normalize  0.013541
+highly variable genes  0.024126
+                scale  0.056816
+                  pca  0.304431
+            neighbors  3.390595
+              louvain  0.234628
+                 umap 10.331827
+            I/O write  0.170320
+    rank_genes_groups  2.757137
+TOTAL: 24.234 s
+MAJOR BOTTLENECK: umap (10.332 s)
+	Command being timed: "python scanpy_pbmc.py --data-dir data --data-set pbmc6k --out-dir data --num-threads 1"
+	User time (seconds): 23.66
+	System time (seconds): 0.88
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:24.74
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 897636
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 88
+	Minor (reclaiming a frame) page faults: 200940
+	Voluntary context switches: 11571
+	Involuntary context switches: 97
+	Swaps: 0
+	File system inputs: 24
+	File system outputs: 160376
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
